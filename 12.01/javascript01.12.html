@@ -19,14 +19,32 @@
 let candle = rand(5, 3000);
 console.log('Žvakių kiekis:' , candle)
 
+//Kitas variantas
+
+// let candle = rand(5, 3000);
+//let discount = 0;
+
+// //if(candle >1000)
+// discount = candle * 0.03;
+
+// if(candle >2000)
+// discount = candle * 0.04
+
+//console.log('Uzsakymo suma' , candle);
+//console.log('Nuolaida' , discount);
+//console.log('Suma su nuolaida' , (candle - discount).toFixed(2));
+
+
 let price = candle *1;
 
 console.log('Kaina:' , price)
 
-if(price >= 1000 && price < 2000)
+// if(price >= 1000 && price < 2000)
+
+if(price > 1000)
 console.log( 'Kaina su 3 % nuolaida :' , price - (price* 0.03));
 
-else if(price >= 2000)
+ if(price > 2000)
 console.log( 'Kaina su 4 % nuolaida:' , price - (price* 0.04));
 
 
@@ -35,16 +53,26 @@ price = price.toFixed(2);
 //2 Užduotis
 
 let a = rand(0, 100);
-// console.log(a)
+
 let b = rand(0, 100);
-// console.log(b)
+
 let c = rand(0, 100);
-// console.log(c)
-console.log('abc:', a , b , c)
+
+console.log('Gauti rezultatai:', a , b , c)
 
 
 let average = Math.floor((a+b+c)/3)
 console.log('Vidurkis;' , average)
+
+//let total = 0;
+//let numbers = 0;
+// console.log('Gauti rezultatai:', a , b , c);
+// let average = Math.floor((a+b+c)/3)
+
+
+
+
+
 
 if(a < 10 || a > 90){
    a = 0;
