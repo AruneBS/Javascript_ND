@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+ document.write('<h2>1 užduotis</h2>')
+
+let result = '';
+
+const number = rand(1, 6)
+
+if(number === 1)
+    result += '<h1>1</h1>'
+else if(number === 2)
+    result += '<h2>2</h2>'
+ else if(number === 3)
+    result += '<h3>3</h3>'
+ else if(number === 4)
+result += '<h4>4</h4>'
+else if(number === 5)
+result += '<h5>5</h5>'
+else (number === 6)
+result += '<h6>6</h6'>
+
+
+document.write(result)
+
+
+document.write('<h2>2 užduotis</h2>')
+
+
+let number1 = rand(-10, 10);
+let result1 = '';
+
+let number2 = rand(-10, 10)
+let result2 = '';
+
+let number3 = rand(-10, 10)
+let result3 = '';
+
+
+if(number1 < 0 )
+    result1 = '<h3 style="color:green">' + number1+ '</h3>'
+
+ 
+
+else if(number1 === 0)
+    result1 = '<h3 style="color:red">' + number1+ '</h3>'
+
+
+
+else
+    result1 = '<h3 style="color:blue">' + number1+ '</h3>'
+
+
+
+document.write(result1);
+
+if(number2 < 0 )
+    result2 += '<h3 style="color:green">' + number2+ '</h3>'
+
+else if (number2 === 0)
+    result2 += '<h3 style="color:red">' + number2+ '</h3>'
+
+else 
+    result2 += '<h3 style="color:blue">' + number2+ '</h3>'
+
+
+
+document.write(result2);
+
+if(number3 < 0 )
+    result3 += '<h3 style="color:green">' + number3+ '</h3>'
+
+else if (number3 === 0)
+    result3 += '<h3 style="color:red">' + number3+ '</h3>'
+
+ else 
+    result3 += '<h3 style="color:blue">' + number3+ '</h3>'
+
+document.write(result3);
+
+// 4 uzduotis su ciklais
+
+</script>
+</body>
+</html>
