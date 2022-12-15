@@ -30,7 +30,13 @@ function rand(min, max) {
 
   let age = presentDay - birthday; 
 
-  console.log( ' Aš esu ' +  name , surname + '. Man yra '  + age + ' metai. ');
+  // const  result = 'As esu' + name + ' ' + surname + '. Man yra ' + age + ' metai.'
+
+
+const result = `As esu ${name} ${surname}. Man yra ${presentDay - birthday} metai`;
+  console.log(result);
+
+  // console.log( ' Aš esu ' +  name , surname + '. Man yra '  + age + ' metai. ');
 
 
 

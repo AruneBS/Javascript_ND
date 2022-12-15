@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+document.write('<h2>Pirma uzduotis</h2>');
+       
+       
+const pirmaFunkcija = name => {
+    
+    return 'Labas, ' + name;
+}
+// console.log(pirmaFunkcija('Laura'));
+
+
+
+document.write(pirmaFunkcija('Laura'));
+
+document.write('<h2>Antra uzduotis</h2>');
+
+const textLength = text => text.length;
+
+document.write('Teksto ilgis frazei "Pastatas" yra:' , textLength('Pastatas'));
+
+document.write('<h2>Trecia uzduotis</h2>');
+
+function capitalize(name, last_name){
+    let nameLetter = name[0].toUpperCase();
+    let surnameLetter = last_name[0].toUpperCase();
+
+    name = nameLetter + name.slice(1);
+    last_name = surnameLetter + last_name.slice(1);
+
+return name + '  ' + last_name;
+
+    // console.log(name, last_name);
+
+    // console.log(nameLetter, surnameLetter);
+}
+
+document.write(capitalize('arune' , 'braziunaite'));
+
+document.write('<h2>Ketvirta uzduotis</h2>');
+
+function randomNumbersList() {
+    const pirmas = rand(0, 5);
+    const antras = rand(0, 5);
+    const trecias = rand(0, 5);
+
+console.log(pirmas + ' , ' + antras + ' , ' + trecias);
+document.write(pirmas + ' , ' + antras + ' , ' + trecias);
+
+}
+ randomNumbersList();
+
+document.write('<h2>Penkta uzduotis</h2>');
+
+function arrayGenerator(from, to, limit){
+    if(typeof from != 'number' &&
+    typeof to != 'number' &&
+    typeof limit != 'number'
+    ) 
+        return 'Neteisingai perduoti argumentai';
+
+        const array = [ ]; 
+        for(let i = 0; i < limit; i++){
+        array[array.length] = rand(from, to);
+        }
+        return array;
+    
+    
+}
+ console.log(arrayGenerator(10, 100));
+ document.write(arrayGenerator(10, 100));
+
+ //uzduotis 12.08
+ document.write('<h2>Uzduotis "Vinies kalimas"</h2>');
+
+
+ let counter = 0;
+
+ for( let i = 0; i < 5; i ++) {
+    let limit = 85;
+
+    while(limit > 0) {
+        limit -= rand(5, 20);
+        console.log('Kalimo eiga', limit);
+        counter++;
+    }
+ }
+
+ document.write('Ikalti penkis vinis prireike ' +  counter  + ' smugius');
+
+ document.write('<h2>Uzduotis "Vinies kalimas 2 dalis"</h2>');
+
+   counter = 0;
+
+ for( let i = 0; i < 5; i ++) {
+    let limit = 85;
+
+    while(limit > 0) {
+        if(rand(0, 1) === 1){
+            console.log('I vini nepataikem');
+            continue;
+        }
+        limit -= rand(20, 30);
+        // console.log('Kalimo eiga', limit);
+        counter++;
+    }
+ }
+ document.write('Ikalti penkis vinis prireike ' +  counter  + ' smugius');
+
+
+
+    </script>
+</body>
+</html>
