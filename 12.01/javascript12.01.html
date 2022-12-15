@@ -24,16 +24,18 @@ let rezultatas = 0;
 
 if(pirmas > antras){
     if(antras === 0){
-        rezultatas = 'Dalyba is nulio negalima';
-    }
-    rezultatas = (pirmas / antras).toFixed(2);
+        console.log('Dalyba is nulio negalima');
+    } else {
+        console.log(`Pirmas skaicius (${pirmas}) yra didesnis uz antraji (${antras}). Rezultatas (${pirmas / antras})`);
+    } 
 } else {
-    resultatas = (antras / pirmas).toFixed(2);
+    rezultatas = (antras / pirmas).toFixed(2);
 }
 
 
-      console.log('Gautos reiksmes', pirmas, antras);
-      console.log('Rezultatas', rezultatas);
+
+    //   console.log('Gautos reiksmes', pirmas, antras);
+    //   console.log('Rezultatas', rezultatas);
 
     //   Naudokite funkciją ir sukurkite tris kintamuosius kuriems 
     //priskirkite atsitiktines reikšmes nuo 0 iki 25. Raskite ir atspausdinkite vidurinę reikšmę.
@@ -59,16 +61,30 @@ if(pirmas > antras){
     const pavarde = 'Pitas';
     const inicialai = vardas[0] + pavarde[0];
 
-    console.log('Inicialai', inicialai);
+    console.log('Inicialai: ' , inicialai);
+    document.write('Inicialai: ' , inicialai);
 
     //Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
-
+    
+document.write('<h3>4 uzduotis</h3>');
     const stringas = 'abcdefghijklmnoprstuvwxyz';
 const number1 = rand(0, stringas.length - 1);
 const number2 = rand(0, stringas.length - 1);
 const number3 = rand(0, stringas.length - 1);
 
     console.log(stringas[number1] + stringas[number2] + stringas[number3]);
+
+    document.write(stringas[number1] + stringas[number2] + stringas[number3]);
+
+document.write('<h3>Papildoma pvz</h2>')
+
+    const str = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`;
+ const newString = str.replaceAll(' it ', ' Aciu ').replaceAll(' It ', ' Aciu ');
+ 
+ console.log(newString);
+ 
+ document.write(newString);
+
 
     </script>
 </body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+        const masyvas = [ 
+            [
+                [10, 30, 30],
+                ['Pirmas', 'Kede', 'Trecias'], 
+                [true, false, true], 
+                [null, null, null],
+                ],
+          'Stalas',
+          [],
+          [],     
+        ];
+        // console.log(masyvas);
+        // console.log(masyvas [0][1][1]);
+for(const level1 in masyvas){
+    if(masyvas[level1] === 'Stalas')
+    console.log('Radom reiksme Stalas');
+
+    for(const level2 in masyvas[level1]){
+        if(masyvas[level1][level2] === 'Stalas')
+        console.log('Radom reiksme Stalas');
+
+        for(const level3 in masyvas[level1][level2]){
+            if(masyvas[level1][level2][level3] === 'Stalas')
+            masyvas[level1][level2][level3] = 'Kede';
+        }
+    }
+}
+for(const object of masyvas [0] [1]){
+    console.log(object);
+
+}
+console.log(masyvas);
+
+
+const abecele = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const generatedArray = [];
+
+
+for(let i = 0; i < 10; i++){
+    const count = rand(2, 20);
+// console.log('Pirmo lygio masyvo elemento generavimas');
+
+generatedArray[i] = [];
+    for(let x = 0; x< count; x++){
+        // console.log('Antro lygio masyvo elemento generavimas');
+        const letter = abecele[rand(0, abecele.length - 1)];
+        generatedArray[i].push(letter);
+    }
+    
+    generatedArray[i].sort();
+}
+console.log(generatedArray);
+    </script>
+</body>
+</html>
