@@ -1,143 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<script>
+    <script>
 
-function rand(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-// Naudokite funkcija rand(). Sugeneruokite atsitiktinį skaičių nuo 1 iki 6 ir
-//  jį atspausdinkite atitinkame h tage. Pvz skaičius 3- rezultatas: <h3>3</h3>.
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        // Naudokite funkcija rand(). Sugeneruokite atsitiktinį skaičių nuo 1 iki 6 ir
+        //  jį atspausdinkite atitinkame h tage. Pvz skaičius 3- rezultatas: <h3>3</h3>.
 
- document.write('<h2>1 užduotis</h2>')
+        document.write('<h2>1 užduotis</h2>')
 
-let result = '';
+        let result = '';
 
-const number = rand(1, 6)
+        const number = rand(1, 6)
 
-if(number === 1)
-    result += '<h1>1</h1>'
-else if(number === 2)
-    result += '<h2>2</h2>'
- else if(number === 3)
-    result += '<h3>3</h3>'
- else if(number === 4)
-result += '<h4>4</h4>'
-else if(number === 5)
-result += '<h5>5</h5>'
-else (number === 6)
-result += '<h6>6</h6'>
-
-
-document.write(result)
-
-//Naudokite funkcija rand(). Atspausdinkite 3 skaičius nuo -10 iki 10. Skaičiai mažesni už 0 turi būti žali, 
-// 0 - raudonas, didesni už 0 mėlyni.
+        if (number === 1)
+            result += '<h1>1</h1>'
+        else if (number === 2)
+            result += '<h2>2</h2>'
+        else if (number === 3)
+            result += '<h3>3</h3>'
+        else if (number === 4)
+            result += '<h4>4</h4>'
+        else if (number === 5)
+            result += '<h5>5</h5>'
+        else (number === 6)
+        result += '<h6>6</h6' >
 
 
-document.write('<h2>2 užduotis</h2>')
+            document.write(result)
+
+        //Naudokite funkcija rand(). Atspausdinkite 3 skaičius nuo -10 iki 10. Skaičiai mažesni už 0 turi būti žali, 
+        // 0 - raudonas, didesni už 0 mėlyni.
 
 
-let number1 = rand(-10, 10);
-let result1 = '';
-
-let number2 = rand(-10, 10)
-let result2 = '';
-
-let number3 = rand(-10, 10)
-let result3 = '';
+        document.write('<h2>2 užduotis</h2>')
 
 
-if(number1 < 0 )
-    result1 = '<h3 style="color:green">' + number1+ '</h3>'
+        let number1 = rand(-10, 10);
+        let result1 = '';
 
- 
+        let number2 = rand(-10, 10)
+        let result2 = '';
 
-else if(number1 === 0)
-    result1 = '<h3 style="color:red">' + number1+ '</h3>'
+        let number3 = rand(-10, 10)
+        let result3 = '';
+
+
+        if (number1 < 0)
+            result1 = '<h3 style="color:green">' + number1 + '</h3>'
 
 
 
-else
-    result1 = '<h3 style="color:blue">' + number1+ '</h3>'
+        else if (number1 === 0)
+            result1 = '<h3 style="color:red">' + number1 + '</h3>'
 
 
 
-document.write(result1);
-
-if(number2 < 0 )
-    result2 += '<h3 style="color:green">' + number2+ '</h3>'
-
-else if (number2 === 0)
-    result2 += '<h3 style="color:red">' + number2+ '</h3>'
-
-else 
-    result2 += '<h3 style="color:blue">' + number2+ '</h3>'
+        else
+            result1 = '<h3 style="color:blue">' + number1 + '</h3>'
 
 
 
-document.write(result2);
+        document.write(result1);
 
-if(number3 < 0 )
-    result3 += '<h3 style="color:green">' + number3+ '</h3>'
+        if (number2 < 0)
+            result2 += '<h3 style="color:green">' + number2 + '</h3>'
 
-else if (number3 === 0)
-    result3 += '<h3 style="color:red">' + number3+ '</h3>'
+        else if (number2 === 0)
+            result2 += '<h3 style="color:red">' + number2 + '</h3>'
 
- else 
-    result3 += '<h3 style="color:blue">' + number3+ '</h3>'
-
-document.write(result3);
+        else
+            result2 += '<h3 style="color:blue">' + number2 + '</h3>'
 
 
 
-document.write('<h2>3 uzduotis</h2>');
+        document.write(result2);
 
-// Sukurkite kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses. 
-// Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”, 
-// “2001: A Space Odyssey” ir “It's a Wonderful Life”.
+        if (number3 < 0)
+            result3 += '<h3 style="color:green">' + number3 + '</h3>'
 
-let movieTitle = 'An American in Paris';
-let noVowels = movieTitle.replace(/[aeiou]/gi, '');
-console.log(noVowels);
-document.write('<h5>An American in Paris - ' + noVowels + '</h5>');
+        else if (number3 === 0)
+            result3 += '<h3 style="color:red">' + number3 + '</h3>'
 
+        else
+            result3 += '<h3 style="color:blue">' + number3 + '</h3>'
 
-let movieTitle1 = `Breakfast at Tiffany's`;
-let noVowels1 = movieTitle1.replace(/[aeiou]/gi, '');
-console.log(noVowels1);
-document.write(`<h5>Breakfast at Tiffany's - ` + noVowels1 + '</h5>');
-
-let movieTitle2 = `2011: A Space Odyssey`;
-let noVowels2 = movieTitle2.replace(/[aeiou]/gi, '');
-console.log(noVowels2);
-document.write(`<h5>2011: A Space Odyssey - ` + noVowels2  +  `</h5>`);
-
-let movieTitle3 = `It's a Wonderful Life`;
-let noVowels3 = movieTitle3.replace(/[aeiou]/gi, '');
-console.log(noVowels3);
-document.write(`<h5>It's a Wonderful Life - ` + noVowels3  +  `</h5>`);
+        document.write(result3);
 
 
 
-document.write('<h2>4 uzduotis</h2>');
+        document.write('<h2>3 uzduotis</h2>');
 
-// Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir 
-// suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti raudonos spalvos.
+        // Sukurkite kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses. 
+        // Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”, 
+        // “2001: A Space Odyssey” ir “It's a Wonderful Life”.
 
-const figure = rand(0, 300);
-console.log(figure)
+        let movieTitle = 'An American in Paris';
+        let noVowels = movieTitle.replace(/[aeiou]/gi, '');
+        console.log(noVowels);
+        document.write('<h5>An American in Paris - ' + noVowels + '</h5>');
 
 
+        let movieTitle1 = `Breakfast at Tiffany's`;
+        let noVowels1 = movieTitle1.replace(/[aeiou]/gi, '');
+        console.log(noVowels1);
+        document.write(`<h5>Breakfast at Tiffany's - ` + noVowels1 + '</h5>');
 
-</script>
+        let movieTitle2 = `2011: A Space Odyssey`;
+        let noVowels2 = movieTitle2.replace(/[aeiou]/gi, '');
+        console.log(noVowels2);
+        document.write(`<h5>2011: A Space Odyssey - ` + noVowels2 + `</h5>`);
+
+        let movieTitle3 = `It's a Wonderful Life`;
+        let noVowels3 = movieTitle3.replace(/[aeiou]/gi, '');
+        console.log(noVowels3);
+        document.write(`<h5>It's a Wonderful Life - ` + noVowels3 + `</h5>`);
+
+
+        document.write('<h2>3 uzduotis, II variantas</h2>');
+
+
+        let stringas = 'An American in Paris';
+        let rezultatas = '';
+        let balses = 'aeiyou';
+
+        balses += balses.toUpperCase();
+
+        for (let i = 0; i < stringas.length; i++) {
+            if (!balses.includes(stringas[i]))
+                rezultatas += stringas[i];
+        }
+
+        document.write('Rezultatas: ' + rezultatas);
+
+
+        document.write('<h2>4 uzduotis</h2>');
+
+        // Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir 
+        // suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti raudonos spalvos.
+
+        let skaičiuotuvas = 0;
+        result = '';
+
+        for (let i = 0; i < 300; i++) {
+
+            const figure = rand(0, 300);
+
+            if (figure > 150)
+                skaičiuotuvas++;
+
+            if (figure > 275) {
+                result += '<span style ="color: red;">' + figure + '</span>';
+            } else {
+                result += figure + ' ';
+
+            }
+        }
+
+
+        
+        document.write('Result: ' + result);
+
+
+    </script>
 </body>
+
 </html>
