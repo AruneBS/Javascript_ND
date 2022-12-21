@@ -21,9 +21,12 @@
 
     <button onclick="fridayTask()">Penktadienio užduotis</button>
     <button onclick="uzduotys12_01()">Užduotys</button>
-    
-    <!-- <button onclick="užduotis3()">Trečia užduotis</button>
-    <button onclick="užduotis4()">Ketvirta užduotis</button>
+
+    <h1>12-05</h1>
+    <button onclick="uzduotis12_05()">Užduotys</button>
+
+
+    <!-- <button onclick="užduotis4()">Ketvirta užduotis</button>
     <button onclick="užduotis5()">Penkta užduotis</button> -->
 
 
@@ -191,141 +194,329 @@
 
         // Žvakės su nuolaida
 
-        function candels(){
-
-        
-let candle = rand(5, 3000);
-document.write('<h3>Žvakių kiekis:' , candle + '</h3>');
-
-//Kitas variantas
-
-// let candle = rand(5, 3000);
-//let discount = 0;
-
-// //if(candle >1000)
-// discount = candle * 0.03;
-
-// if(candle >2000)
-// discount = candle * 0.04
-
-//console.log('Uzsakymo suma' , candle);
-//console.log('Nuolaida' , discount);
-//console.log('Suma su nuolaida' , (candle - discount).toFixed(2));
+        function candels() {
 
 
-let price = candle *1;
+            let candle = rand(5, 3000);
+            document.write('<h3>Žvakių kiekis:', candle + '</h3>');
 
-document.write('<h3>Kaina: ' , price + '</h3>');
+            //Kitas variantas
 
-// if(price >= 1000 && price < 2000)
+            // let candle = rand(5, 3000);
+            //let discount = 0;
 
-if(price > 1000)
-document.write( '<h3>Kaina su 3 % nuolaida : ' , price - (price* 0.03)  + '</h3>');
+            // //if(candle >1000)
+            // discount = candle * 0.03;
 
- if(price > 2000)
-document.write( '<h3>Kaina su 4 % nuolaida: ' , price - (price* 0.04) + '</h3>');
+            // if(candle >2000)
+            // discount = candle * 0.04
 
-
-price = price.toFixed(2);
-
-
-//2 Užduotis
-
-
+            //console.log('Uzsakymo suma' , candle);
+            //console.log('Nuolaida' , discount);
+            //console.log('Suma su nuolaida' , (candle - discount).toFixed(2));
 
 
-let a = rand(0, 100);
+            let price = candle * 1;
 
-let b = rand(0, 100);
+            document.write('<h3>Kaina: ', price + '</h3>');
 
-let c = rand(0, 100);
+            // if(price >= 1000 && price < 2000)
 
-document.write('<h3>Gauti rezultatai: ', a , b  ,  c  + '</h3>');
+            if (price > 1000)
+                document.write('<h3>Kaina su 3 % nuolaida : ', price - (price * 0.03) + '</h3>');
+
+            if (price > 2000)
+                document.write('<h3>Kaina su 4 % nuolaida: ', price - (price * 0.04) + '</h3>');
 
 
-let average = Math.floor((a+b+c)/3)
-document.write('<h3>Vidurkis: ' , average + '</h3>');
+            price = price.toFixed(2);
 
-// let total = 0;
-// let numbers = 0;
 
-// if(a > 10 && a < 90) {
-//     total += a
-
-// }
+            //2 Užduotis
 
 
 
 
+            let a = rand(0, 100);
 
-if(a < 10 || a > 90){
-   a = 0;
-} if(b < 10 || b > 90){
-    b = 0;
-} if(c < 10 || b > 90){
-    c = 0;
-}
+            let b = rand(0, 100);
 
-let averageChanged = Math.floor((a+b+c)/3)
-document.write('<h3>Vidurkis <10 arba >90: ' , averageChanged + '</h3>');
+            let c = rand(0, 100);
 
-}
-
-function uzduotys12_01(){
-
-document.write('<h4>Pirma užduotis</h4>')
-const pirmas = rand(0, 4);
-const antras = rand(0 ,4);
-let rezultatas = 0;
-
-if(pirmas > antras){
-    if(antras === 0){
-        document.write('Dalyba is nulio negalima');
-    } else {
-       document.write(`Pirmas skaicius (${pirmas}) yra didesnis uz antraji (${antras}). Rezultatas (${pirmas / antras})`);
-    } 
-} else {
-    rezultatas = (antras / pirmas).toFixed(2);
-}
-
-document.write('<h4>Antra užduotis</h4>')
+            document.write('<h3>Gauti rezultatai: ', a, b, c + '</h3>');
 
 
-//Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. 
-    // Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš pirmų vardo 
-    // ir pavardės kintamųjų raidžių. Jį atspausdinti.
-    document.write('<h4>Trečia užduotis</h4>')
+            let average = Math.floor((a + b + c) / 3)
+            document.write('<h3>Vidurkis: ', average + '</h3>');
 
-    const vardas = 'Bradas';
-    const pavarde = 'Pitas';
-    const inicialai = vardas[0] + pavarde[0];
+            // let total = 0;
+            // let numbers = 0;
 
-    console.log('Inicialai: ' , inicialai);
-    document.write('Inicialai: ' , inicialai);
+            // if(a > 10 && a < 90) {
+            //     total += a
 
-    //Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
-    
-document.write('<h3>4 uzduotis</h3>');
-    const stringas = 'abcdefghijklmnoprstuvwxyz';
-const number1 = rand(0, stringas.length - 1);
-const number2 = rand(0, stringas.length - 1);
-const number3 = rand(0, stringas.length - 1);
+            // }
 
-    console.log(stringas[number1] + stringas[number2] + stringas[number3]);
 
-    document.write(stringas[number1] + stringas[number2] + stringas[number3]);
 
-document.write('<h3>Papildoma pvz</h2>')
 
-    const str = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`;
- const newString = str.replaceAll(' it ', ' Aciu ').replaceAll(' It ', ' Aciu ');
- 
- console.log(newString);
- 
- document.write(newString);
 
-}
+            if (a < 10 || a > 90) {
+                a = 0;
+            } if (b < 10 || b > 90) {
+                b = 0;
+            } if (c < 10 || b > 90) {
+                c = 0;
+            }
 
+            let averageChanged = Math.floor((a + b + c) / 3)
+            document.write('<h3>Vidurkis <10 arba >90: ', averageChanged + '</h3>');
+
+        }
+
+        function uzduotys12_01() {
+
+            document.write('<h4>Pirma užduotis</h4>')
+            const pirmas = rand(0, 4);
+            const antras = rand(0, 4);
+            let rezultatas = 0;
+
+            if (pirmas > antras) {
+                if (antras === 0) {
+                    document.write('Dalyba is nulio negalima');
+                } else {
+                    document.write(`Pirmas skaicius (${pirmas}) yra didesnis uz antraji (${antras}). Rezultatas (${pirmas / antras})`);
+                }
+            } else {
+                rezultatas = (antras / pirmas).toFixed(2);
+            }
+
+            document.write('<h4>Antra užduotis</h4>')
+
+            // Naudokite funkciją ir sukurkite tris kintamuosius kuriems priskirkite atsitiktines reikšmes nuo 0 iki 25. 
+            // Raskite ir atspausdinkite vidurinę reikšmę.
+            const a = rand(0, 25);
+            const b = rand(0, 25);
+            const c = rand(0, 25);
+
+            const min = Math.min(a, b, c);
+            const max = Math.max(a, b, c);
+
+            document.write('<h5>Gauti skaičiai : </h5> ', a, b, c);
+            document.write('<h5>Minimalus skaičius: </h5> ', min);
+            document.write('<h5>Maksimalus skaičius : </h5> ', max);
+
+            console.log('Vidurinė reikšmė : ', (a + b + c) - (max + min));
+            document.write('<h5>Vidurinė reikšmė : </h5> ', (a + b + c) - (max + min));
+
+
+            //Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. 
+            // Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš pirmų vardo 
+            // ir pavardės kintamųjų raidžių. Jį atspausdinti.
+            document.write('<h4>Trečia užduotis</h4>')
+
+            const vardas = 'Bradas';
+            const pavarde = 'Pitas';
+            const inicialai = vardas[0] + pavarde[0];
+
+            console.log('Inicialai: ', inicialai);
+            document.write('Inicialai: ', inicialai);
+
+            //Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
+
+            document.write('<h3>Ketvirta užduotis</h3>');
+            const stringas = 'abcdefghijklmnoprstuvwxyz';
+            const number1 = rand(0, stringas.length - 1);
+            const number2 = rand(0, stringas.length - 1);
+            const number3 = rand(0, stringas.length - 1);
+
+            console.log(stringas[number1] + stringas[number2] + stringas[number3]);
+
+            document.write(stringas[number1] + stringas[number2] + stringas[number3]);
+
+            document.write('<h3>Papildoma pvz</h3>')
+
+            const str = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`;
+            const newString = str.replaceAll(' it ', ' Aciu ').replaceAll(' It ', ' Aciu ');
+
+            console.log(newString);
+
+            document.write(newString);
+
+        }
+
+        // Naudokite funkcija rand(). Sugeneruokite atsitiktinį skaičių nuo 1 iki 6 ir
+        //  jį atspausdinkite atitinkame h tage. Pvz skaičius 3- rezultatas: <h3>3</h3>.
+
+        function uzduotis12_05() {
+
+
+
+            document.write('<h4>1 užduotis</h4>')
+
+            let result = '';
+
+            const number = rand(1, 6)
+
+            if (number === 1)
+                result += '<h1>1</h1>'
+            else if (number === 2)
+                result += '<h2>2</h2>'
+            else if (number === 3)
+                result += '<h3>3</h3>'
+            else if (number === 4)
+                result += '<h4>4</h4>'
+            else if (number === 5)
+                result += '<h5>5</h5>'
+            else (number === 6)
+            result += '<h6>6</h6' >
+
+
+                document.write('Gautas rezultatas: ', result);
+
+
+            // Naudokite funkcija rand(). Atspausdinkite 3 skaičius nuo -10 iki 10. 
+            // Skaičiai mažesni už 0 turi būti žali, 0 - raudonas, didesni už 0 mėlyni.
+
+
+            document.write('<h3>2 užduotis</h3>')
+
+
+            let number1 = rand(-10, 10);
+            let result1 = '';
+
+            let number2 = rand(-10, 10)
+            let result2 = '';
+
+            let number3 = rand(-10, 10)
+            let result3 = '';
+
+
+            if (number1 < 0)
+                result1 = '<h3 style="color:green">' + number1 + '</h3>'
+
+
+
+            else if (number1 === 0)
+                result1 = '<h3 style="color:red">' + number1 + '</h3>'
+
+
+
+            else
+                result1 = '<h3 style="color:blue">' + number1 + '</h3>'
+
+
+
+            document.write(result1);
+
+            if (number2 < 0)
+                result2 += '<h3 style="color:green">' + number2 + '</h3>'
+
+            else if (number2 === 0)
+                result2 += '<h3 style="color:red">' + number2 + '</h3>'
+
+            else
+                result2 += '<h3 style="color:blue">' + number2 + '</h3>'
+
+
+
+            document.write(result2);
+
+            if (number3 < 0)
+                result3 += '<h3 style="color:green">' + number3 + '</h3>'
+
+            else if (number3 === 0)
+                result3 += '<h3 style="color:red">' + number3 + '</h3>'
+
+            else
+                result3 += '<h3 style="color:blue">' + number3 + '</h3>'
+
+            document.write(result3);
+
+            document.write('<h2>3 uzduotis</h2>');
+
+            // Sukurkite kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses. 
+            // Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”, 
+            // “2001: A Space Odyssey” ir “It's a Wonderful Life”.
+
+            let movieTitle = 'An American in Paris';
+            let noVowels = movieTitle.replace(/[aeiou]/gi, '');
+            console.log(noVowels);
+            document.write('<h5>An American in Paris - ' + noVowels + '</h5>');
+
+
+            let movieTitle1 = `Breakfast at Tiffany's`;
+            let noVowels1 = movieTitle1.replace(/[aeiou]/gi, '');
+            console.log(noVowels1);
+            document.write(`<h5>Breakfast at Tiffany's - ` + noVowels1 + '</h5>');
+
+            let movieTitle2 = `2011: A Space Odyssey`;
+            let noVowels2 = movieTitle2.replace(/[aeiou]/gi, '');
+            console.log(noVowels2);
+            document.write(`<h5>2011: A Space Odyssey - ` + noVowels2 + `</h5>`);
+
+            let movieTitle3 = `It's a Wonderful Life`;
+            let noVowels3 = movieTitle3.replace(/[aeiou]/gi, '');
+            console.log(noVowels3);
+            document.write(`<h5>It's a Wonderful Life - ` + noVowels3 + `</h5>`);
+
+            document.write('<h2>3 uzduotis, II variantas</h2>');
+
+
+            let stringas = 'An American in Paris';
+            let rezultatas = '';
+            let balses = 'aeiyou';
+
+            balses += balses.toUpperCase();
+
+            for (let i = 0; i < stringas.length; i++) {
+                if (!balses.includes(stringas[i]))
+                    rezultatas += stringas[i];
+            }
+
+            document.write('Rezultatas: ' + rezultatas);
+
+
+            document.write('<h2>4 uzduotis</h2>');
+
+            // Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir 
+            // suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti raudonos spalvos.
+
+            let skaičiuotuvas = 0;
+            result = '';
+
+            for (let i = 0; i < 300; i++) {
+
+                const figure = rand(0, 300);
+
+                if (figure > 150)
+                    skaičiuotuvas++;
+
+                if (figure > 275) {
+                    result += '<span style ="color: red;">' + figure + '</span>';
+                } else {
+                    result += figure + ' ';
+
+                }
+            }
+
+
+
+            document.write('Result: ' + result);
+
+            document.write('<h2>5 uzduotis</h2>');
+
+            rezultatas = '';
+
+            // Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais.
+            //  Po paskutinio skaičiaus kablelio neturi būti. Jeigu reikia, panaudokite css, kad visi rezultatai matytųsi ekrane.
+
+            for (let i = 1; i <= 3000; i++) {
+                if (i % 77 === 0)
+                    const rezultatas = 
+
+            }
+        }
     </script>
 
 
