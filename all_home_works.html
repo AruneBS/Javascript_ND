@@ -1,21 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <h1>11-30 užduotys</h1>
+
+    <button onclick="užduotis1()">Pirma užduotis</button>
+    <button onclick="užduotis2()">Antra užduotis</button>
+    <button onclick="užduotis3()">Trečia užduotis</button>
+    <button onclick="užduotis4()">Ketvirta užduotis</button>
+    <button onclick="užduotis5()">Penkta užduotis</button>
+
+    <h1>12-01 užduotys</h1>
+
+    <button onclick="fridayTask()">Penktadienio užduotis</button>
+    <button onclick="uzduotys12_01()">Užduotys</button>
+    
+    <!-- <button onclick="užduotis3()">Trečia užduotis</button>
+    <button onclick="užduotis4()">Ketvirta užduotis</button>
+    <button onclick="užduotis5()">Penkta užduotis</button> -->
+
+
+
+
+
+
     <script>
-     function rand(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
-  }
-  
-  
-  
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+        }
+
+
+        // 1 užduotis
+        function užduotis1() {
+
+
+
+            const firstStringas = 'Brad Pitt';
+
+
+            const secondStringas = 'Zoe Saldana';
+
+            let result = '';
+
+            if (firstStringas.length > secondStringas.length) {
+                result += 'Brad Pitt';
+            } else {
+                result += 'Zoe Saldana';
+            }
+            document.write('<h2>Gautas rezultatas : </h2>', result);
+
+        }
+
+        // 2 užduotis
+        function užduotis2() {
+
+            let name = 'Arūnė';
+
+            let surname = 'Sysas';
+
+            let birthday = 1983;
+
+            let presentDay = 2022;
+
+            let age = presentDay - birthday;
+
+            // const  result = 'As esu' + name + ' ' + surname + '. Man yra ' + age + ' metai.'
+
+
+            const final = `As esu ${name} ${surname}. Man yra ${presentDay - birthday} metai`;
+            document.write(final);
+
+            // console.log( ' Aš esu ' +  name , surname + '. Man yra '  + age + ' metai. ');
+
+        }
+
+        //3 užduotis
+
+        function užduotis3() {
+
+
+            let favorite1 = 'Nicole Kidman';
+
+            let favorite2 = 'Matt Smith';
+
+            let newFavorite = favorite1[3] + favorite1[4] + favorite1[5] + favorite2[1] + favorite2[2] + favorite2[3] + favorite1[10] + favorite1[11] + favorite1[12] + favorite2[7] + favorite2[8] + favorite2[9];
+
+
+            document.write(newFavorite)
+        }
+        //4 užduotis
+        function užduotis4() {
+
+
+            const stringas = 'Once upon a time in Hollywood';
+
+            // stringas = stringas.replaceAll('O', '*').replaceAll('o', '*');
+
+            document.write(stringas.replaceAll('o', '*').replaceAll('O', '*'));
+        }
+
+        //5 užduotis
+        // Sukurkite keturis kintamuosius kuriems sugeneruokite atsitiktines reikšmes nuo 0 iki 2. S
+        // uskaičiuokite kiek yra nulių, vienetų ir dvejetų. 
+
+        function užduotis5() {
+
+
+
+
+            const skaicius1 = rand(0, 2);
+            const skaicius2 = rand(0, 2);
+            const skaicius3 = rand(0, 2);
+            const skaicius4 = rand(0, 2);
+
+
+            let nuliai = 0;
+            let vienetai = 0;
+            let dvejetai = 0;
+
+            if (skaicius1 === 0)
+                nuliai++;
+
+            if (skaicius2 === 0)
+                nuliai++;
+
+            if (skaicius3 === 0)
+                nuliai++;
+
+            if (skaicius4 === 0)
+                nuliai++;
+
+
+            if (skaicius1 === 1)
+                vienetai++;
+
+            if (skaicius2 === 1)
+                vienetai++;
+
+
+            if (skaicius3 === 1)
+                vienetai++;
+
+
+            if (skaicius4 === 1)
+                vienetai++;
+
+
+            if (skaicius1 === 2)
+                dvejetai++;
+
+            if (skaicius2 === 2)
+                dvejetai++;
+
+
+            if (skaicius3 === 2)
+                dvejetai++;
+
+
+            if (skaicius4 === 2)
+                dvejetai++;
+
+
+
+
+
+
+
+
+
+
+
+            console.log('Atsitiktinis skaicius:', skaicius1, skaicius2, skaicius3, skaicius4);
+            console.log('Gautas rezultatas:', nuliai, vienetai, dvejetai);
+
+            document.write('<h1>Atsitiktinis skaicius:</h1>' + skaicius1, skaicius2, skaicius3, skaicius4);
+
+            document.write('<h1>Gautas rezultatas: </h1>' + 'Nuliai: ' + nuliai + ' Vientai: ' + vienetai + ' Dvejetai: ' + dvejetai);
+
+        }
+
+
+        // Žvakės su nuolaida
+
+        function candels(){
+
+        
+let candle = rand(5, 3000);
+document.write('<h3>Žvakių kiekis:' , candle + '</h3>');
+
+//Kitas variantas
+
+// let candle = rand(5, 3000);
+//let discount = 0;
+
+// //if(candle >1000)
+// discount = candle * 0.03;
+
+// if(candle >2000)
+// discount = candle * 0.04
+
+//console.log('Uzsakymo suma' , candle);
+//console.log('Nuolaida' , discount);
+//console.log('Suma su nuolaida' , (candle - discount).toFixed(2));
+
+
+let price = candle *1;
+
+document.write('<h3>Kaina: ' , price + '</h3>');
+
+// if(price >= 1000 && price < 2000)
+
+if(price > 1000)
+document.write( '<h3>Kaina su 3 % nuolaida : ' , price - (price* 0.03)  + '</h3>');
+
+ if(price > 2000)
+document.write( '<h3>Kaina su 4 % nuolaida: ' , price - (price* 0.04) + '</h3>');
+
+
+price = price.toFixed(2);
+
+
+//2 Užduotis
+
+
+
+
+let a = rand(0, 100);
+
+let b = rand(0, 100);
+
+let c = rand(0, 100);
+
+document.write('<h3>Gauti rezultatai: ', a , b  ,  c  + '</h3>');
+
+
+let average = Math.floor((a+b+c)/3)
+document.write('<h3>Vidurkis: ' , average + '</h3>');
+
+// let total = 0;
+// let numbers = 0;
+
+// if(a > 10 && a < 90) {
+//     total += a
+
+// }
+
+
+
+
+
+if(a < 10 || a > 90){
+   a = 0;
+} if(b < 10 || b > 90){
+    b = 0;
+} if(c < 10 || b > 90){
+    c = 0;
+}
+
+let averageChanged = Math.floor((a+b+c)/3)
+document.write('<h3>Vidurkis <10 arba >90: ' , averageChanged + '</h3>');
+
+}
+
+function uzduotys12_01(){
+
+document.write('<h4>Pirma užduotis</h4>')
+const pirmas = rand(0, 4);
+const antras = rand(0 ,4);
+let rezultatas = 0;
+
+if(pirmas > antras){
+    if(antras === 0){
+        document.write('Dalyba is nulio negalima');
+    } else {
+       document.write(`Pirmas skaicius (${pirmas}) yra didesnis uz antraji (${antras}). Rezultatas (${pirmas / antras})`);
+    } 
+} else {
+    rezultatas = (antras / pirmas).toFixed(2);
+}
+
+document.write('<h4>Antra užduotis</h4>')
+
+
+//Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. 
+    // Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš pirmų vardo 
+    // ir pavardės kintamųjų raidžių. Jį atspausdinti.
+    document.write('<h4>Trečia užduotis</h4>')
+
+    const vardas = 'Bradas';
+    const pavarde = 'Pitas';
+    const inicialai = vardas[0] + pavarde[0];
+
+    console.log('Inicialai: ' , inicialai);
+    document.write('Inicialai: ' , inicialai);
+
+    //Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių. Stringo ilgis 3 simboliai.
+    
+document.write('<h3>4 uzduotis</h3>');
+    const stringas = 'abcdefghijklmnoprstuvwxyz';
+const number1 = rand(0, stringas.length - 1);
+const number2 = rand(0, stringas.length - 1);
+const number3 = rand(0, stringas.length - 1);
+
+    console.log(stringas[number1] + stringas[number2] + stringas[number3]);
+
+    document.write(stringas[number1] + stringas[number2] + stringas[number3]);
+
+document.write('<h3>Papildoma pvz</h2>')
+
+    const str = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`;
+ const newString = str.replaceAll(' it ', ' Aciu ').replaceAll(' It ', ' Aciu ');
+ 
+ console.log(newString);
+ 
+ document.write(newString);
+
+}
+
     </script>
+
+
+
+
+
 </body>
+
 </html>
