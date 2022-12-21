@@ -61,18 +61,80 @@ console.log(stringas.replaceAll('o', '*').replaceAll('O', '*'));
 
 
 //5 užduotis
-
-const randomSkaicius1 = rand (0, 2);
-const randomSkaicius2 = rand (0, 2);
-const randomSkaicius3 = rand (0, 2);
-const randomSkaicius4 = rand (0, 2);
-
-console.log('Atsitiktinis skaicius:' , randomSkaicius1);
-console.log('Atsitiktinis skaicius:' , randomSkaicius2);
-console.log('Atsitiktinis skaicius:' , randomSkaicius3);
-console.log('Atsitiktinis skaicius:' , randomSkaicius4);
+// Sukurkite keturis kintamuosius kuriems sugeneruokite atsitiktines reikšmes nuo 0 iki 2. S
+// uskaičiuokite kiek yra nulių, vienetų ir dvejetų. 
 
 
+document.write('<h2>5 uzduotis</h2>');
+
+const skaicius1 = rand (0, 2);
+const skaicius2 = rand (0, 2);
+const skaicius3 = rand (0, 2);
+const skaicius4 = rand (0, 2);
+
+
+let nuliai = 0;
+let vienetai = 0;
+let dvejetai = 0;
+
+if(skaicius1 === 0)
+nuliai++;
+
+if(skaicius2 === 0)
+nuliai++;
+
+if(skaicius3 === 0)
+nuliai++;
+
+if(skaicius4 === 0)
+nuliai++;
+
+
+if(skaicius1 === 1)
+vienetai++;
+
+if(skaicius2 === 1)
+vienetai++;
+
+
+if(skaicius3 === 1)
+vienetai++;
+
+
+if(skaicius4 === 1)
+vienetai++;
+
+
+if(skaicius1 === 2)
+dvejetai++;
+
+if(skaicius2 === 2)
+dvejetai++;
+
+
+if(skaicius3 === 2)
+dvejetai++;
+
+
+if(skaicius4 === 2)
+dvejetai++;
+
+
+
+
+
+
+
+
+
+
+
+console.log('Atsitiktinis skaicius:' , skaicius1 , skaicius2, skaicius3 , skaicius4);
+console.log('Gautas rezultatas:' , nuliai , vienetai ,  dvejetai);
+
+document.write('<h1>Atsitiktinis skaicius:</h1>'  +  skaicius1 , skaicius2, skaicius3 , skaicius4);
+
+document.write('<h1>Gautas rezultatas: </h1>'  +   nuliai  ,  vienetai ,   dvejetai);
 
 
 
