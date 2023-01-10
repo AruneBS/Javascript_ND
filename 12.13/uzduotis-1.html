@@ -28,11 +28,16 @@ const pirmaFunkcija = name => {
 
 document.write(pirmaFunkcija('Laura'));
 
+
+
 document.write('<h2>Antra uzduotis</h2>');
 
 const textLength = text => text.length;
 
 document.write('Teksto ilgis frazei "Pastatas" yra:' , textLength('Pastatas'));
+
+
+
 
 document.write('<h2>Trecia uzduotis</h2>');
 
@@ -52,6 +57,8 @@ return name + '  ' + last_name;
 
 document.write(capitalize('arune' , 'braziunaite'));
 
+
+
 document.write('<h2>Ketvirta uzduotis</h2>');
 
 function randomNumbersList() {
@@ -65,7 +72,11 @@ document.write(pirmas + ' , ' + antras + ' , ' + trecias);
 }
  randomNumbersList();
 
+
+
 document.write('<h2>Penkta uzduotis</h2>');
+
+
 
 function arrayGenerator(from, to, limit){
     if(typeof from != 'number' &&
@@ -74,7 +85,11 @@ function arrayGenerator(from, to, limit){
     ) 
         return 'Neteisingai perduoti argumentai';
 
+        if(from > to)
+        return 'Neteisingai užpildytos reikšmės';
+
         const array = [ ]; 
+        
         for(let i = 0; i < limit; i++){
         array[array.length] = rand(from, to);
         }
