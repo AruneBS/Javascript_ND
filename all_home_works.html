@@ -6,9 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+       
+    </style>
 </head>
 
 <body>
+
     <h1>11-30 užduotys</h1>
 
     <button onclick="užduotis1()">Pirma užduotis</button>
@@ -24,6 +29,9 @@
 
     <h1>12-05</h1>
     <button onclick="uzduotis12_05()">Užduotys</button>
+
+    <h1>12-13</h1>
+    <button onclick="uzduotis12_13()">Užduotys</button>
 
 
     <!-- <button onclick="užduotis4()">Ketvirta užduotis</button>
@@ -500,10 +508,10 @@
                 }
             }
 
-
-
             document.write('Result: ' + result);
 
+
+            
             document.write('<h2>5 uzduotis</h2>');
 
             rezultatas = '';
@@ -513,11 +521,112 @@
 
             for (let i = 1; i <= 3000; i++) {
                 if (i % 77 === 0)
-                rezultatas += (i === 2926) ? i + '' : i + ', ';
+                    rezultatas += (i === 2926) ? i + '' : i + ', ';
             }
 
             document.write(rezultatas);
+
+            document.write('<h2>6 uzduotis</h2>');
+
+            let i = 0;
+            let linija = '';
+
+            while (i < 400) {
+                if( i % 50 === 0 &&  i != 0)
+                    linija += '<br/>';
+                
+                linija += '*';
+                i++;
+            }
+            console.log(linija);
+            document.write(linija); 
         }
+
+        function uzduotis12_13() {
+
+
+        document.write('<h2>Pirma uzduotis</h2>');
+       
+       
+       const pirmaFunkcija = name => {
+           
+           return 'Labas, ' + name;
+       }
+       // console.log(pirmaFunkcija('Laura'));
+       
+       
+       
+       document.write(pirmaFunkcija('Laura'));
+       
+       
+       
+       document.write('<h2>Antra uzduotis</h2>');
+       
+       const textLength = text => text.length;
+       
+       document.write('Teksto ilgis frazei "Pastatas" yra:' , textLength('Pastatas'));
+       
+       
+       
+       
+       document.write('<h2>Trecia uzduotis</h2>');
+       
+       function capitalize(name, last_name){
+           let nameLetter = name[0].toUpperCase();
+           let surnameLetter = last_name[0].toUpperCase();
+       
+           name = nameLetter + name.slice(1);
+           last_name = surnameLetter + last_name.slice(1);
+       
+       return name + '  ' + last_name;
+       
+           // console.log(name, last_name);
+       
+           // console.log(nameLetter, surnameLetter);
+       }
+       
+       document.write(capitalize('arune' , 'braziunaite'));
+       
+       
+       
+       document.write('<h2>Ketvirta uzduotis</h2>');
+       
+       function randomNumbersList() {
+           const pirmas = rand(0, 5);
+           const antras = rand(0, 5);
+           const trecias = rand(0, 5);
+       
+       console.log(pirmas + ' , ' + antras + ' , ' + trecias);
+       document.write(pirmas + ' , ' + antras + ' , ' + trecias);
+       
+       }
+        randomNumbersList();
+       
+       
+        
+       document.write('<h2>Penkta uzduotis</h2>');
+       
+       
+       
+       function arrayGenerator(from, to, limit){
+           if(typeof from != 'number' &&
+           typeof to != 'number' &&
+           typeof limit != 'number'
+           ) 
+               return 'Neteisingai perduoti argumentai';
+       
+               const array = [ ]; 
+               for(let i = 0; i < limit; i++){
+               array[array.length] = rand(from, to);
+               }
+               return array;
+           
+           
+       }
+        console.log(arrayGenerator(10, 100));
+        document.write(arrayGenerator(10, 100));
+    }
+
     </script>
 
 
